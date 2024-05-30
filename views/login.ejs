@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="/login.css">
+    <title>Login</title>
+</head>
+<body>
+
+<div class="wrapper">
+    <header class="header-login">
+        <h4 >Login</h4>
+    </header>
+    <div class="form-wrapper sign-in">
+        
+        <form action="/login" method="post">
+            <div class="input-group">
+                <input id="input" type="email" name="uemail" required>
+                <label for="input">Email</label>
+                <i class="material-icons">person</i>
+            </div>
+            <div class="input-group">
+                <input id="password" type="password" name="upass" required>
+                <label for="password">Password</label>
+                <i class="material-icons">lock</i>
+            </div>
+            <div class="remember_box">
+                <div class="remember">
+                    <input type="checkbox" name="remember" id="remember" value="remember">
+                    Remember me
+                </div>
+                <a href="#">Forgot Password ?</a>
+            </div>
+            <button type="submit">Login</button>
+            <div class="signUp-link">
+                <p> Don't have an account? 
+                    <a href="#" onclick="swapTexts()" class="signUpBtn-link">Sign Up</a>
+                </p>
+            </div>
+        </form>
+    </div>
+
+
+    <div class="form-wrapper sign-up">
+        
+        <form action="/register" class="form" method="post">
+            <div class="input-group">
+                <input id="input" type="text" name="uname" required>
+                <label for="input">Username</label>
+                <i class="material-icons">person</i>
+            </div>
+            <div class="input-group">
+                <input id="input" type="email" name="uemail" required>
+                <label for="input">Email</label>
+                <i class="material-icons">email</i>
+            </div>
+            <div class="input-group">
+                <input id="password" type="password" name="upass" required>
+                <label for="password">Password</label>
+                <i class="material-icons">lock</i>
+            </div>
+            <div class="input-group">
+                <!-- <label for="user type">User Type:</label> -->
+                <select  type="user type" name="utype" id="user type">
+                    <option selected class="selected" value="user type">User Type</option>
+                    <option value="teacher">Teacher</option>
+                    <option value="student">student</option>
+                </select>
+            </div>
+            <button class="button_2" type="submit">Sign Up</button>
+            <div class="signIn-link">
+                <p> Already have an account? 
+                    <a href="#" onclick="swapTexts()" class="signInBtn-link">Sign In</a>
+                </p>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+<script src="/Login.js"></script>
+</body>
+</html>
